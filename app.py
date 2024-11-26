@@ -596,6 +596,7 @@ def render_calendar_tab():
                         <div class="event-card">
                             <strong>{event['name']}</strong><br>
                             <span>📍 {event['location']}</span><br>
+                            <span>📍 {event['priority']}</span><br>
                             <span>📅 {formatted_date}</span>
                         </div>
                     """, unsafe_allow_html=True)
