@@ -431,7 +431,7 @@ class NotionCalendarRAG:
     def _extract_title(self, property_data: Dict[str, Any]) -> str:
         """Extract title from property data."""
         try:
-            return property_data.get('title', [{}])[0].get('text', {}).get('content', "No Title")
+            return property_data.get('title', [{}])[0].get('text', {}).get('content')
         except (IndexError, KeyError):
             return "No Title"
 
@@ -596,7 +596,6 @@ def render_calendar_tab():
                         <div class="event-card">
                             <strong>{event['name']}</strong><br>
                             <span>📍 {event['location']}</span><br>
-                           
                             <span>📅 {formatted_date}</span>
                         </div>
                     """, unsafe_allow_html=True)
