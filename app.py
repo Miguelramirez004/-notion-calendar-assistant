@@ -922,7 +922,7 @@ def main():
                 st.success("Chat history cleared!")
 
     # Main content area
-    st.title("Find your work-life balance ")
+    st.title("FIND YOUR WORK-LIFE BALANCE")
     
     if not st.session_state.authenticated:
         st.markdown("""
