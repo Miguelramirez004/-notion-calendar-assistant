@@ -922,12 +922,12 @@ def main():
                 st.success("Chat history cleared!")
 
     # Main content area
-    st.title("📅 Notion Calendar & Productivity Assistant")
+    st.title("Find your work-life balance ")
     
     if not st.session_state.authenticated:
         st.markdown("""
             <div class="stcard">
-                <h2 class="header-text">Welcome to Notion Calendar Assistant! 👋</h2>
+                <h2 class="header-text">Welcome to workwell! 👋</h2>
                 <p>To get started, please configure your API keys in the sidebar.</p>
                 <ul>
                     <li>Connect your OpenAI account for AI-powered responses</li>
@@ -944,7 +944,7 @@ def main():
         tab1, tab2, tab3, tab4 = st.tabs([
             "💬 Chat", 
             "📅 Calendar", 
-            "⚡ Productivity",
+            "⚡ Productivity tools",
             "✅ Tasks"
         ])
         
