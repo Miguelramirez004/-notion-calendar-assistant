@@ -1,7 +1,7 @@
 import os
 from dotenv import load_dotenv
 import streamlit as st
-from langchain.chat_models import ChatOpenAI
+from langchain_community.chat_models import ChatOpenAI
 from langchain.memory import ConversationBufferMemory
 from langchain.prompts import ChatPromptTemplate
 from notion_client import Client
@@ -152,8 +152,8 @@ class NotionCalendarRAG:
         try:
             self.notion = Client(auth=notion_api_key)
             self.model = ChatOpenAI(
-                openai_api_key=openai_api_key,
-                model="gpt-3.5-turbo",
+                api_key=openai_api_key,
+                model_name="gpt-3.5-turbo",
                 temperature=0.7,
                 max_tokens=500
             )
